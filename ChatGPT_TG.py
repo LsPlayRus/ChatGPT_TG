@@ -14,11 +14,11 @@ bot = telebot.TeleBot('6120216837:AAF9QhbzhXaM95xAt5M1t4DHX2W-Oqf2kbo')
 ###############################################################
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Привет! Я - бот, использующий ChatGPT для ответа на ваши сообщения! Просто напиште вопрос после команды /text")
+    bot.reply_to(message, 'Привет! Я - бот, использующий ChatGPT для ответа на ваши сообщения! Просто напишите "/text запрос"')
 ###############################################################
 @bot.message_handler(commands=['help'])
 def send_Help(message):
-    bot.reply_to(message, 'Используйте "text запрос" для ответа на сообщение \nКонтакты - @yaderny_xyesos2004')
+    bot.reply_to(message, 'Используйте "/text запрос" для ответа на сообщение \nКонтакты - @yaderny_xyesos2004')
 ################################################################
 @bot.message_handler(commands=['text'])
 def save_message(message):
