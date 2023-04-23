@@ -1,1 +1,1 @@
-worker: ChatGPT_TG
+worker: run ChatGPT_TG
