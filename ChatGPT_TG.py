@@ -14,11 +14,11 @@ bot = telebot.TeleBot('6120216837:AAF9QhbzhXaM95xAt5M1t4DHX2W-Oqf2kbo')
 ###############################################################
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Привет! Я бот использующий ChatGPT для ответа на ваши сообщения, просто напиши вопрос после команды /text")
+    bot.reply_to(message, "Привет! Я - бот, использующий ChatGPT для ответа на ваши сообщения! Просто напиште вопрос после команды /text")
 ###############################################################
 @bot.message_handler(commands=['help'])
 def send_Help(message):
-    bot.reply_to(message, "Используй /text для ответа на сообщение ChatGPT \nКонтакты - @yaderny_xyesos2004")
+    bot.reply_to(message, 'Используйте "text запрос" для ответа на сообщение \nКонтакты - @yaderny_xyesos2004')
 ################################################################
 @bot.message_handler(commands=['text'])
 def save_message(message):
@@ -31,6 +31,8 @@ def save_message(message):
         answer = answer.replace('<br />','')
         if answer.find('-524 - A timeout occurred')!=(-1):
           answer = 'Ошибка -524. Высокая загруженность сервиса. Просим подождать.'
+        if answer=='':
+          answer = 'Ошибка. Задан пустой запрос. Задайте вопрос формата: "/text запрос"'
         bot.reply_to(message, answer)
     else:
         bot.reply_to(message, 'Вы не имеете доступа.')
