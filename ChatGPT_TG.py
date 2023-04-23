@@ -1,4 +1,3 @@
-﻿from string import printable
 from freechatgpt import FreeChatgpt
 import telegram
 import telebot
