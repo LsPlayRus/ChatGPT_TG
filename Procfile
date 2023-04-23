@@ -1,0 +1,1 @@
+worker: python ChatGPT_TG
