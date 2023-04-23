@@ -10,7 +10,7 @@ admin_users = [5606789191, 2137791273, 1785680981]
 # переменная для хранения текста сообщения
 message_text = ''
 # создаем бота
-bot = telebot.TeleBot('6120216837:AAF9QhbzhXaM95xAt5M1t4DHX2W-Oqf2kbo')
+bot = telebot.TeleBot('5106956956:AAGx3anrS0ZM70VsEKXkCyH_85tnNRcq8iw')
 ###############################################################
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
